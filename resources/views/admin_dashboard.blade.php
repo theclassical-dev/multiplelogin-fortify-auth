@@ -10,7 +10,7 @@
                 <div class="card-body">
                    
 
-                    this is admin
+                    this is {{ Auth::user()->name }}
                 </div>
             </div>
         </div>

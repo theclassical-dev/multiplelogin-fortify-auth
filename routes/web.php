@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminRegController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,5 +26,6 @@ Route::post('/admin/login', [MainController::class,'login'])->name('admin.login.
 
 Route::prefix('admin')->group(function(){
     Route::get('/', [AdminController::class,'index'])->name('admin.dashboard');
+    Route::any('/register', [AdminRegController::class,'register'])->name('admin.reg');
 });
 
